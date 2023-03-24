@@ -523,6 +523,7 @@ main {
 }
 
 .service-item {
+  min-height: 200px;
   position: relative;
   background: var(--border-gradient-onyx);
   padding: 20px;
@@ -1396,7 +1397,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     justify-content: flex-start;
     align-items: flex-start;
     gap: 18px;
-    padding: 30px;
+    padding: 50px;
   }
 
   .service-icon-box {
@@ -1588,7 +1589,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .testimonials-modal {
     gap: 35px;
-    max-width: 680px;
+    max-width: 800px;
   }
 
   .modal-avatar-box img { width: 80px; }
@@ -1879,4 +1880,29 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+.card.flipped .card-front {
+  transform: rotateY(180deg);
+}
+
+.card.flipped .card-back {
+  transform: rotateY(0);
+}
+
+.card .card-front, .card .card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  transition: transform 0.6s ease;
+}
+
+.card .card-front {
+  transform: rotateY(0);
+}
+
+.card .card-back {
+  transform: rotateY(-180deg);
 }

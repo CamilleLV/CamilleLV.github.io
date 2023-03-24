@@ -157,3 +157,11 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+const cards = document.querySelectorAll('.card');
+
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('flipped');
+  });
+});
