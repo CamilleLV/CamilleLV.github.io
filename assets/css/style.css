@@ -129,7 +129,7 @@ a { text-decoration: none; }
 
 li { list-style: none; }
 
-img, ion-icon, a, button, time, span { display: block; }
+img, ion-icon, button, time, span { display: block; }
 
 button {
   font: inherit;
@@ -2161,4 +2161,12 @@ textarea.form-input::-webkit-resizer { display: none; }
   flex-direction : column ;
   justify-content : center ;
   align-items : center ;
+}
+
+a { 
+  text-decoration: none; 
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-3);
+  line-height: 1.6;
 }
