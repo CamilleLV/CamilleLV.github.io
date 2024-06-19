@@ -274,7 +274,7 @@ article.active {
 
 .has-scrollbar::-webkit-scrollbar {
   width: 5px; /* for vertical scrollbar */
-  height: 5px; /* for horizontal scrollbar */
+  height: 10px; /* for horizontal scrollbar */
 }
 
 .has-scrollbar::-webkit-scrollbar-track {
@@ -333,7 +333,7 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
+  max-height: 150px;
   overflow: hidden;
   transition: var(--transition-2);
 }
@@ -345,7 +345,7 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 .avatar-box {
@@ -577,6 +577,90 @@ main {
   line-height: 1.6;
 }
 
+/**
+ * #service2
+ */
+
+ .service2 { margin-bottom: 35px; }
+
+ .service2-title { margin-bottom: 20px; }
+ 
+ .service2-list {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 20px;
+ }
+ 
+ .service2-item {
+  align-content: center;
+   min-height: 400px;
+   position: relative;
+   background: var(--border-gradient-onyx);
+   padding: 7.5%;
+   border-radius: 14px;
+   box-shadow: var(--shadow-2);
+   z-index: 1;
+ }
+ 
+ .service2-item:hover{
+   background: var(--bg-gradient-yellow-1);
+ }
+ 
+ .service2-item::before {
+   content: "";
+   position: absolute;
+   inset: 1px;
+   background: var(--bg-gradient-jet);
+   border-radius: inherit;
+   z-index: -1;
+ }
+ 
+ .service2-icon-box { margin-bottom: 10px; }
+ 
+ .service2-icon-box img { margin: auto; }
+ 
+ .service2-content-box { text-align: justify; }
+ 
+ .service2-item-title { margin-bottom: 7px; }
+ 
+ .service2-item-text {
+   color: var(--light-gray);
+   font-size: var(--fs-6);
+   font-weight: var(--fw-3);
+   line-height: 1.6;
+ }
+
+ table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  border: 2px solid #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+
+.vert{
+  border-left: 4px solid #1a9b0c;
+}
+
+.vertmoinsvert{
+  border-left: 4px solid #78a20e;
+}
+
+.jaune{
+  border-left: 4px solid #efef08;
+}
+
+table td:first-child {
+  width: 25%;
+}
+
+table td:nth-child(2) {
+  width: 75%;
+}
+
 
 /**
  * #testimonials 
@@ -629,6 +713,24 @@ main {
   overflow: hidden;
 }
 
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Deux colonnes de largeur égale */
+  gap: 10px; /* Espace entre les images */
+  width: 85%; /* Ajustez selon vos besoins */
+  align-items: center;
+}
+
+.image-grid a {
+  display: block; /* S'assurer que les liens prennent tout l'espace disponible */
+  width: 100%; /* S'assurer que les liens prennent toute la largeur de la cellule de la grille */
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  display: block; /* Évite les espaces en dessous des images */
+}
 
 /**
  * #testimonials-modal
@@ -645,12 +747,12 @@ main {
   align-items: center;
   overflow-y: auto;
   overscroll-behavior: contain;
-  z-index: 20;
+  z-index: 1;
   pointer-events: none;
   visibility: hidden;
 }
 
-.modal-container::-webkit-scrollbar { display: none; }
+.modal-container::-webkit-scrollbar { display: inside; }
 
 .modal-container.active {
   pointer-events: all;
@@ -738,7 +840,7 @@ main {
 
 .modal-content p {
   color: var(--light-gray);
-  font-size: var(--fs-6);
+  font-size: var(--fs-8);
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
@@ -1317,7 +1419,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   .sidebar, article {
     width: 520px;
     margin-inline: auto;
-    padding: 30px;
+    padding: 20px;
   }
 
   .article-title {
@@ -1361,7 +1463,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar.active { max-height: 584px; }
 
-  .sidebar-info { gap: 25px; }
+  .sidebar-info { gap: 15px; }
 
   .avatar-box { border-radius: 30px; }
 
@@ -1850,7 +1952,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .sidebar {
-    position: sticky;
+    position: static;
     top: 60px;
     max-height: max-content;
     height: 100%;
@@ -1932,6 +2034,35 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .card .card-back {
+  transform: rotateY(-180deg);
+}
+
+
+.card2.flipped .card2-front {
+  transform: rotateY(180deg);
+}
+
+.card2.flipped .card2-back {
+  transform: rotateY(0);
+}
+
+.card2 .card2-front, .card2 .card2-back {
+  backface-visibility: hidden;
+  max-width: 80%;
+  position: absolute;
+  transition: transform 0.6s ease;
+}
+
+.card2 .card2-front {
+  transform: rotateY(0);
+}
+
+.card2-front img{ 
+  max-width: 90%;
+  border-radius: 14px;
+}
+
+.card2 .card2-back {
   transform: rotateY(-180deg);
 }
 

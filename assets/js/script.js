@@ -102,3 +102,12 @@ cards.forEach(card => {
     card.classList.toggle('flipped');
   });
 });
+
+
+const cards2 = document.querySelectorAll('.card2');
+
+cards2.forEach(card2 => {
+  card2.addEventListener('click', () => {
+    card2.classList.toggle('flipped');
+  });
+});
