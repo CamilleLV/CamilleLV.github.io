@@ -642,15 +642,15 @@ td {
 }
 
 .vert{
-  border-left: 4px solid #1a9b0c;
+  border-left: 4px solid #109714;
 }
 
 .vertmoinsvert{
-  border-left: 4px solid #78a20e;
+  border-left: 4px solid #ccc920;
 }
 
 .jaune{
-  border-left: 4px solid #efef08;
+  border-left: 4px solid #ef9e08;
 }
 
 table td:first-child {
