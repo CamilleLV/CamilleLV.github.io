@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can add custom styles here */
+
+.profile-img-organic {
+  border-radius: 45% 55% 50% 50% / 60% 40% 55% 45%;
+  transition: clip-path 0.3s ease-in-out;
+  width: 80%;       /* si tu veux réduire la taille */
+  height: 80%;      /* idem */
+  object-fit: cover; /* garde le centrage correct */
+}
